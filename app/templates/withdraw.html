@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <title>PROJECT-ATM</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+    body{
+        background-color: #0099FF;
+        font-family: 'Roboto';
+        font-size: 30px;
+        }
+    .img-rounded{
+      margin-top: 10px;
+      margin-left: 10px;
+      margin-bottom: 10px;
+    }
+    h1{
+      margin-top: 50px;
+      margin-left: 20px;
+    }
+    input[type="number"]{
+        font:small-caption;
+        font-size:25px;
+    }
+    .container-fluid{
+        margin-left: 450px;
+        margin-top: 30px;
+        margin-right: 350px;
+    }
+    .home{
+        margin-left: 1200px;
+        margin-top: 100px;
+    }
+    .logs{
+        margin-left: 1100px;
+      }
+      </style>
+  </head>
+  <body>
+     <table>
+      <tr valign="top">
+          <td><img class="img-rounded" src="{{ customer.avatar(128) }}"></td>
+          <td><h1>{{ customer.first_name+" "+customer.last_name }}</h1></td>
+      </tr>
+    </table>
+    <div class="logs">
+        <a href="/logout">
+          <span class="glyphicon glyphicon-log-out"></span> Log out
+        </a>
+    </div>
+    <div class="container-fluid">
+      <form method="post" action="{{ url_for('withdraw') }}">
+          <div class="form-group">
+              {{ form.withdrawAmount.label }}:<br> 
+              {{ form.withdrawAmount(placeholder='Enter amount...') }}
+        </div>
+          <button type="submit" class="btn btn-default">Withdraw</button>
+      </form>
+    </div>
+    <div class="home">
+      <a href="/transactions">
+        <i class="material-icons" style="font-size:80px;color:lightblue;text-shadow:2px 2px 4px #000000;">home
+        </i>
+      </a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <title>PROJECT-ATM</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+    body{
+        background-color: #0099FF;
+        font-family: 'Roboto';
+        font-size: 30px;
+        }
+    .img-rounded{
+      margin-top: 10px;
+      margin-left: 10px;
+      margin-bottom: 10px;
+    }
+    h1{
+      margin-top: 50px;
+      margin-left: 20px;
+    }
+      .btn {
+        border-radius: 4px;
+        background-color: #f4511e;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 28px;
+        padding-top: 80px;
+        width: 250px;
+        height: 180px;
+        line-height: 1em;
+        box-sizing: border-box;
+        cursor: pointer;
+        margin: 5px;
+      }
+      #depo{
+        margin-left: 450px;
+        margin-top: 20px;
+      }
+      #bal{
+        margin-left: 15px;
+        margin-top: 20px;
+      }
+      #with{
+        margin-left: 450px;
+        margin-top: 15px;
+      }
+      #trans{
+        margin-left: 15px;
+        margin-top: 15px;
+      }
+      .logs{
+        margin-left: 1100px;
+      }
+      </style>
+  </head>
+  <body>
+     <table>
+      <tr valign="top">
+          <td><img class="img-rounded" src="{{ customer.avatar(128) }}"></td>
+          <td><h1>{{ customer.first_name+" "+customer.last_name }}</h1></td>
+      </tr>
+      </table>
+      <div class="logs">
+            <a href="/logout">
+              <span class="glyphicon glyphicon-log-out"></span> Log out
+            </a>
+          </div>
+      <div>
+        <div>
+          <a id="depo" class="btn" href="/deposit" role="button">Deposit</a>
+          <a id="bal" class="btn" href="/balance" role="button">Check Balance</a>
+        </div>
+        <div>
+          <a id="with" class="btn" href="/withdraw" role="button">Withdraw</a>
+          <a id="trans" class="btn" href="/transfer" role="button">Transfer</a>
+        </div>
+      </div>
+  </body>
+</html>

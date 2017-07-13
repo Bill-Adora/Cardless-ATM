@@ -1,0 +1,8 @@
+app/Face_Recognizer/model/Resnet-v1/model-20170216-091149.ckpt-250000.data-00000-of-00001
+app/Face_Recognizer/model/Resnet-v1/model-20170216-091149.ckpt-250000.index
+app/Face_Recognizer/model/Resnet-v1/model-20170216-091149.meta
+app/Face_Recognizer/__pycache__/*
+app/__pycache__/*
+app/Face_Recognizer/Images/*
+__pycache__/*
+db_repository/__pycache__/*
